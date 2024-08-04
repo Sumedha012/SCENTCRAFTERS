@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://assets.vogue.com/photos/58915806b482c0ea0e4d7a2a/master/pass/pastel-perfume-spring-1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 20px; /* Added padding to create space from the edges */
+            color: #4b4b4b;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            text-align: justify;
+            max-width: 700px; /* Adjusted max-width for better accommodation */
+            margin: 0 auto; /* Centering the container horizontally */
+        }
+        h1 {
+            color: #6c5ce7;
+            font-family: 'Pacifico', cursive;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #484298;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        h3 {
+            color: #6c5ce7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .text-box {
+            border: 1px solid #6c5ce7;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: #4b4b4b;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Placed!</h1>
+        <div>
+            <h2>Experience the essence of luxury delivered to your doorstep within 3 to 4 business days. Payment on delivery ensures convenience and satisfaction guaranteed. Elevate your senses with our exquisite fragrances today!</h2>
+            <h3>Order Details:</h3>
+            <form action="/track_order" method="post">
+                <p>Perfume Name: <span class="text-box">{{name_on_perfume }}</span></p>
+                <p>Perfume Message: <span class="text-box">{{ message }}</span></p>
+                
+                <p>Delivery Address: <span class="text-box">{{ address }}</span></p>
+                <p>Order ID: <span class="text-box">{{ orderId }}</span></p>
+                
+                <p>Price: <span class="text-box">{{ price }}</span></p>
+               
+                
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

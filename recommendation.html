@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Recommender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose an Ingredient</h1>
+    <form action="/recommendations" method="post">
+        <select name="ingredient_id">
+            {% for ingredient_id, ingredient_name in ingredients %}
+                <option value="{{ ingredient_id }}">{{ ingredient_name }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Get Recommendations">
+    </form>
+
+    <h1>Recommended Second Ingredients</h1>
+    <ul>
+        {% for ingredient_id, ingredient_name in recommendations %}
+            <li>{{ ingredient_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

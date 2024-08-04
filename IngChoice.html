@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYc9Tup2JPeMJTy-5kJyAHU27Du9LsRLtEPg&usqp=CAU') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            color: #333; /* dark text */
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.8); /* translucent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color:rgb(86, 58, 24);
+            
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        .ingredient-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .ingredient-image-container {
+            text-align: center;
+        }
+        .ingredient-image {
+            width: 130px;
+            height: 130px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .ingredient-image:hover {
+            border-color: #666; /* dark gray border on hover */
+        }
+        .ingredient-name {
+            font-size: 18px;
+            margin-top: 5px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: rgb(151, 108, 55);
+        }
+        #second-ingredients {
+            text-align: center;
+            margin-top: 20px;
+        
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            color: rgb(86, 58, 24);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9); /* translucent white background */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>PERFUME INGREDIENT SELECTION</h1>
+        <form action="/create_perfume" method="post">
+            <div class="ingredient-images">
+                <div class="ingredient-image-container">
+                   <button type="submit" name="ingredient_id" value="I016">
+                      <img src="https://img.getimg.ai/generated/img-0ewPhNrdTBquDCjH3bBrn.jpeg" alt="Ingredient 1" class="ingredient-image">
+                    </button>
+                <div class="ingredient-name">Vanilla</div>
+                </div>
+            </div>
+            <div class="ingredient-images">
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I025">
+                        <img src="https://img.getimg.ai/generated/img-2BO5YDX7gJXo2ySj1O7Gw.jpeg" alt="Ingredient 2" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Leather</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I023">
+                        <img src="https://img.getimg.ai/generated/img-hyGmChE7I2Qbcm3KORdTu.jpeg" alt="Ingredient 3" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Cinnamon</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I038">
+                        <img src="https://img.getimg.ai/generated/img-uUCgxB8ocDxhxrCGZfM08.jpeg" alt="Ingredient 4" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Lily of the valley</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I007">
+                        <img src="https://img.getimg.ai/generated/img-VVIJK8YFOeZ05dPq0LdZL.jpeg" alt="Ingredient 5" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Jasmine</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I018">
+                        <img src="https://img.getimg.ai/generated/img-dQOYiOvhdT7GD98jwmy2i.jpeg" alt="Ingredient 6" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Frangipani</div>
+                </div>
+            </div>
+            <div class="ingredient-images">
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I010">
+                        <img src="https://img.getimg.ai/generated/img-RKOgMXlQJikwYsguZg0ID.jpeg" alt="Ingredient 7" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Sandalwood</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I004">
+                        <img src="https://img.getimg.ai/generated/img-Ep4FYzCyTT85RAJqvEMQZ.jpeg" alt="Ingredient 8" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Oakmoss</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I005">
+                        <img src="https://img.getimg.ai/generated/img-9DBfIcKLEVgMYxumWhf1r.jpeg" alt="Ingredient 9" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Amber</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I042">
+                        <img src="https://img.getimg.ai/generated/img-f6ZwQXvcNX5VbwmJjWWRH.jpeg" alt="Ingredient 10" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Woody Notes</div>
+                </div>
+            </div>
+            <div class="ingredient-images">
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I047">
+                        <img src="https://img.getimg.ai/generated/img-SxhbkrjpMnSo6Ap18GICL.jpeg" alt="Ingredient 16" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Lychee</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I002">
+                        <img src="https://img.getimg.ai/generated/img-cZRIQFRERxhoMJnfkbspM.jpeg" alt="Ingredient 17" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Grapefruit</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I015">
+                        <img src="https://img.getimg.ai/generated/img-VfifRXfQwgcH7pniLOqjz.jpeg" alt="Ingredient 18" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Neroli</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I024">
+                        <img src="https://img.getimg.ai/generated/img-a0wRipCfhDg1Syt7rQZve.jpeg" alt="Ingredient 19" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Sea salt accord</div>
+                </div>
+                <div class="ingredient-image-container">
+                    <button type="submit" name="ingredient_id" value="I043">
+                        <img src="https://img.getimg.ai/generated/img-04S5lTRcuECLSf34DAv82.jpeg" alt="Ingredient 20" class="ingredient-image">
+                    </button>
+                    <div class="ingredient-name">Iris</div>
+                </div>
+                <!-- Add more ingredient-image-container elements for any remaining ingredients -->
+            </div>
+        <div class="ingredient-images">
+            <div class="ingredient-image-container">
+                <button type="submit" name="ingredient_id" value="I008">
+                    <img src="https://img.getimg.ai/generated/img-a0wRipCfhDg1Syt7rQZve.jpeg" alt="Ingredient 21" class="ingredient-image">
+                </button>
+                <div class="ingredient-name">Cardamom</div>
+            </div>
+            
+            <div class="ingredient-image-container">
+                <button type="submit" name="ingredient_id" value="I017">
+                    <img src="https://img.getimg.ai/generated/img-bo5DmUN1gEVzb2vIQn0jD.jpeg" alt="Ingredient 22" class="ingredient-image">
+                </button>
+                <div class="ingredient-name">Musk</div>
+            </div>
+            <div class="ingredient-image-container">
+                <button type="submit" name="ingredient_id" value="I020">
+                    <img src="https://img.getimg.ai/generated/img-qTBF4BMXj8n7oU2p8tcDl.jpeg" alt="Ingredient 23" class="ingredient-image">
+                </button>
+                <div class="ingredient-name">Lemon</div>
+            </div>
+            <div class="ingredient-image-container">
+                <button type="submit" name="ingredient_id" value="I012">
+                    <img src="https://img.getimg.ai/generated/img-UsLZrckkmv6tkr8GH30sD.jpeg" alt="Ingredient 24" class="ingredient-image">
+                </button>
+                <div class="ingredient-name">Green notes</div>
+            </div>
+         </div>  
+        </form>        
+                                               
+            <!-- <div id="second-ingredients">
+                <label for="recommended-second-ingredient"><h1>SECOND INGREDIENT</h1></label>
+                <select id="recommended-second-ingredient" name="second_ingredient">
+                    {% for family, ingredient_name, fragrance_name, fragrance_id in second_ingredients %}
+                    <option value="{{ family }}">{{ family }} - {{ ingredient_name }} - {{ fragrance_name }}- {{ fragrance_id }}</option>
+                    {% endfor %}
+                </select>
+            </div> 
+    </div> -->
+
+    <div id="second-ingredients">
+        <label for="recommended-second-ingredient"><h1>SECOND INGREDIENT</h1></label>
+        <select id="recommended-second-ingredient" name="second_ingredient">
+            <option value="" selected disabled>-- Select Ingredient 2 --</option>
+            <!-- Placeholder option for the dropdown -->
+            {% for family, ingredient_name, fragrance_name, fragrance_id in second_ingredients %}
+                <option value="{{ family }}" data-fragrance-name="{{ fragrance_name }}" data-fragrance-id="{{ fragrance_id }}">{{ family }} - {{ ingredient_name }} - {{ fragrance_name }} - {{ fragrance_id }}</option>
+            {% endfor %}
+        </select>
+        <button type="button" id="choose-ingredient">Choose</button>
+    </div>
+</form>
+</div>
+
+<script>
+document.getElementById('choose-ingredient').addEventListener('click', function() {
+    var selectedOption = document.getElementById('recommended-second-ingredient').value;
+    if(selectedOption) {
+        var fragranceName = document.querySelector('#recommended-second-ingredient [value="' + selectedOption + '"]').dataset.fragranceName;
+        var fragranceId = document.querySelector('#recommended-second-ingredient [value="' + selectedOption + '"]').dataset.fragranceId;
+        
+        // Redirect to bottles.html with fragranceName and fragranceId as query parameters
+        window.location.href = "/bottles?fragranceName=" + encodeURIComponent(fragranceName) + "&fragranceId=" + encodeURIComponent(fragranceId);
+    } else {
+        alert("Please select an ingredient first.");
+    }
+});
+</script>
+</body>
+</html>

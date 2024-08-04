@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  .bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('static/loginbg.png') no-repeat center center fixed; 
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  .bg-tint {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 192, 203, 0.6); /* Pink color with opacity */
+    z-index: -1;
+  }
+  .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(182, 157, 157, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    z-index: 1;
+  }
+  .login-container h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  .login-btn {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background: #7D3C98;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .login-btn:hover {
+    background: #5B2C6F;
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+<div class="bg-tint"></div> <!-- Pink tint overlay -->
+
+<div class="login-container">
+  <h1>LOGIN </h1>
+  <form action="/login" method="post">
+    <div class="input-group">
+      <input type="tel"  name="phone" placeholder="Phone Number" required>
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <center><button class="login-btn" type="submit">LOGIN</button></center>
+  </form>
+</div>
+
+</body>
+</html>

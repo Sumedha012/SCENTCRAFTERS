@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choose your Perfume Bottle</title>
+<style>
+  body {
+    background-image: url('static/bottlebg.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333; /* Text color */
+    font-family: Arial, sans-serif;
+    height:400%;
+  }
+  h1 {
+    color: purple; /* Heading color */
+    text-align: center;
+  }
+  h2 {
+    color: purple; /* Heading color */
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px; /* Adjust this value as needed */
+  }
+  .box {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+  }
+  .box img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  .box h2 {
+    margin-bottom: 5px;
+  }
+  .box p {
+    margin-bottom: 5px;
+  }
+  .choose-btn {
+    padding: 10px 20px;
+    background-color: #ad88e9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .choose-btn:hover {
+    background-color: #5B2C6F;
+  }
+</style>
+</head>
+<body>
+
+<h1>Choose your Perfume Bottle</h1>
+<h2 >Choose the best fit for your <span id="fragranceNamePlaceholder">{{fragrance_name}}</span> fragrance</h2>
+
+<form action="/bottle" method="POST"></form>
+<div class="container">
+  <div class="box">
+    <img src="static/vintage charm.png" alt="Vintage Charm">
+    <h2>Vintage Charm</h2>
+    <p>Antiques for the modern soul</p>
+    <p>Quantity: 200mL</p>
+    <button class="choose-btn" name= 'Vintage Charm' id="B001">Choose</button>
+  </div>
+  <div class="box">
+    <img src="static/mystic woods.jpeg" alt="Mystic Woods">
+    <h2>Mystic Woods</h2>
+    <p>Take pleasure in the pathless woods</p>
+    <p>Quantity: 200mL</p>
+    <button class="choose-btn" name= 'Mystic Woods' id="B002">Choose</button>
+  </div>
+  <div class="box">
+    <img src="static/classic elegance.jpeg" alt="Classic Elegance">
+    <h2>Classic Elegance</h2>
+    <p>Luxury is class. Being classy is a lifestyle.</p>
+    <p>Quantity: 200mL</p>
+    <button class="choose-btn" name= 'Classic Elegance' id="B003">Choose</button>
+  </div>
+  <div class="box">
+    <img src="static/modern and sleek.jpeg" alt="Modern and Sleek">
+    <h2>Modern</h2>
+    <p>You are never fully dressed without perfume</p>
+    <p>Quantity: 200mL</p>
+    <button class="choose-btn" name='Modern and Sleek' id="B004">Choose</button>
+  </div>
+  <div class="box">
+    <img src="static/ocean breeze.jpeg" alt="Ocean Breeze">
+    <h2>Ocean Breeze</h2>
+    <p>The ocean does not like to be restrained</p>
+    <p>Quantity: 200mL</p>
+    <button class="choose-btn" name="Ocean Breeze" id='B005'>Choose</button>
+  </div>
+</div>
+
+
+<script>
+  document.querySelectorAll('.choose-btn').forEach(button => {
+      button.addEventListener('click', function() {
+          var bottleId = this.id; // Get the ID of the clicked button (which corresponds to the bottle ID)
+          
+          // Redirect to the orders page with the bottle ID as a query parameter
+          window.location.href = "/orders?bottleId=" + encodeURIComponent(bottleId);
+      });
+  });
+  </script>
+
+
+
+</body>
+</html>
